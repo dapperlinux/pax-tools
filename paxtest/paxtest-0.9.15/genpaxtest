@@ -1,0 +1,95 @@
+#!/bin/sh
+#
+# Script to run all the PaX memory protection tests
+#
+# Copyright(c) 2003,2004 by Peter Busser <peter@adamantix.org>
+# This file has been released under the GNU Public Licence version 2 or later.
+# See the file COPYING for details.
+#
+
+echo $RUNDIR
+if [ "${RUNDIR}" = "/sbin/paxtest-files" ]
+then
+	RUNDIR=.
+fi
+
+cat << __here__ > paxtest
+#!/bin/sh
+
+if [ \$# = 1 -o \$# = 2 ]
+then
+	if [ "\$1" = "kiddie" ]
+	then
+		PAXTEST_MODE=0
+		shift
+	elif [ "\$1" = "blackhat" ]
+	then
+		PAXTEST_MODE=1
+		shift
+	else
+		echo "usage: paxtest [kiddie|blackhat] [logfile]"
+		exit 1
+	fi
+else
+	echo "usage: paxtest [kiddie|blackhat] [logfile]"
+	exit 1
+fi
+
+LOG=\$HOME/paxtest.log
+[ -n "\$1" ] && LOG=\$1
+touch "\$LOG"
+if [ ! -e "\$LOG" ]; then
+	echo "Could not create logfile in \$LOG" >&2
+	exit 1
+fi
+export PAXTEST_MODE
+
+if [ "\${LD_LIBRARY_PATH}" = "" ]
+then
+	LD_LIBRARY_PATH=${RUNDIR}
+else
+	LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:${RUNDIR}
+fi
+export LD_LIBRARY_PATH
+
+cat <<__end__ | tee \$LOG
+PaXtest - Copyright(c) 2003-2016 by Peter Busser <peter@adamantix.org> and Brad Spengler <spender@grsecurity.net>
+Released under the GNU Public Licence version 2 or later
+
+__end__
+
+echo "Mode: \$PAXTEST_MODE" >>\$LOG
+if [ "\$PAXTEST_MODE" -eq 0 ]; then
+	echo -n "Kiddie" >>\$LOG
+fi
+if [ "\$PAXTEST_MODE" -eq 1 ]; then
+	echo -n "Blackhat" >>\$LOG
+fi
+echo >>\$LOG
+
+echo "Kernel: " >>\$LOG
+uname -a >>\$LOG
+echo >>\$LOG
+if [ -e /usr/bin/lsb_release ]; then
+	echo "Relase information: " >>\$LOG
+	lsb_release -a 2>/dev/null >>\$LOG
+fi
+echo "Test results:" >>\$LOG
+
+echo "Writing output to \$LOG"
+echo 'It may take a while for the tests to complete'
+echo "Test results:"
+
+for i in $*
+do
+	${RUNDIR}/\$i || echo
+done 2>&1 | tee -a \$LOG
+
+echo
+
+__here__
+
+chmod 755 paxtest
+
+exit 0
+

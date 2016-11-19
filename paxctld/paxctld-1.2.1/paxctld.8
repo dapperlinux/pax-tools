@@ -1,0 +1,70 @@
+.TH PAXCTLD 8
+.SH NAME
+paxctld \- Daemon to automatically apply appropriate PaX flags
+.SH SYNOPSIS
+.B paxctld
+[
+.B \-c <config_file>
+]
+[
+.B \-d
+]
+[
+.B \-p <pid_file>
+]
+[
+.B \-q
+]
+
+.SH DESCRIPTION
+
+.I paxctld
+is a daemon that automatically applies PaX flags to binaries on
+the system.  These flags are applied via user extended attributes
+and are refreshed on any update to the binaries specified in
+its configuration file.
+
+.I paxctld.conf
+is the configuration file located in /etc that defines which
+binaries to mark with specific PaX flags.  The format of this
+configuration file is multiple lines of the form:
+
+.RS
+<full pathname> <PaX flags> [nonroot]
+.RE
+
+Empty lines or lines beginning with '#' are ignored.  Files
+that have spaces in the path leading to them must be surrounded
+in double quotes. The optional nonroot string is to be used if
+the file being  marked is not owned by root.  paxctld will not
+allow files not owned by root to be marked (or have their
+symlinks followed) without this string.  If the pathname
+specifies a symlink not owned by root, the target of the symlink
+must have the same owner.
+
+.SH OPTIONS
+.TP
+
+.B \-c <config_file>
+Specify a config file other than the default of \%/etc/paxctld.conf
+.TP
+
+.B \-d
+Make paxctld run as a daemon
+.TP
+
+.B \-p <pid_file>
+Specify the pid file to use when running in daemon mode
+.TP
+
+.B \-q
+Enable quiet mode to suppress all syslogs from paxctld
+
+.SH REPORTING BUGS
+Please include as much information as possible and send bug reports
+to
+.B spender@grsecurity.net
+
+.SH AUTHOR
+.B paxctld
+was created and is maintained by Brad Spengler \%<spender@\grsecurity.net>

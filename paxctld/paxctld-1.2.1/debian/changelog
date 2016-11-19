@@ -1,0 +1,50 @@
+paxctld (1.2.1-1) unstable; urgency=low
+  * Updated default paxctld.conf to improve Ubuntu usability
+  * Updated chrome/firefox settings now that the anti-defense
+    "features" of firefox in particular have been fixed
+
+ -- Brad Spengler <spender@grsecurity.net>  Sat, 23 Jul 2016 10:11:00 -0500
+
+paxctld (1.2-1) unstable; urgency=low
+  * Added support for filesystems that don't provide d_type, from Damir Vandic:
+    https://forums.grsecurity.net/viewtopic.php?f=1&t=4484
+
+ -- Brad Spengler <spender@grsecurity.net>  Sun, 17 Jul 2016 20:10:00 -0500
+
+paxctld (1.1-1) unstable; urgency=low
+  * Added support for paths with spaces, from Austin Seipp
+
+ -- Brad Spengler <spender@grsecurity.net>  Tue, 9 Feb 2016 22:57:00 -0500
+
+paxctld (1.0-4) unstable; urgency=low
+  * Fixed a non-security-relevant crash on too-large paxctld.conf files,
+    reported by Jurriaan Bremer
+  * Fixed the xattrs set by paxctld -- due to the nonintuitivity of PaX
+    xattr parsing which differed from some previous marking methods, it
+    ended up being the case that if EMUTRAMP was enabled in the kernel,
+    all binaries marked with xattrs via paxctld were running with EMUTRAMP
+    enabled.  Running the updated version of paxctld will fix the issue
+    on binaries listed in paxctld.conf.  This issue was found via an internal
+    audit.
+
+ -- Brad Spengler <spender@grsecurity.net>  Wed, 23 Dec 2015 14:48:00 -0500
+
+paxctld (1.0-3) unstable; urgency=low
+  * Fixed starting at boot with systemd, from rufoa
+  * Added support for reading extra config files from /etc/paxctld.d
+    Files beginning with '.' are ignored, as are any non-regular files
+    in the directory
+
+ -- Brad Spengler <spender@grsecurity.net>  Thu, 29 Oct 2015 20:29:00 -0500
+
+paxctld (1.0-2) unstable; urgency=low
+  * Fixed a missing quotation mark in upstart script, reported by
+    Andrew Alexander
+
+ -- Brad Spengler <spender@grsecurity.net>  Thu, 1 Jan 2015 11:51:00 -0500
+
+paxctld (1.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Brad Spengler <spender@grsecurity.net>  Tue, 16 Dec 2014 21:06:36 -0500

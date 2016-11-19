@@ -1,0 +1,16 @@
+Source: paxctld
+Section: admin
+Priority: important
+Maintainer: Brad Spengler <spender@grsecurity.net>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: https://grsecurity.net
+
+Package: paxctld
+Architecture: any
+Depends: ${misc:Depends}
+Description: Daemon to automatically set appropriate PaX flags
+	paxctld automatically sets appropriate PaX flags on binaries on the
+	system using user extended attributes.  The flags are maintained
+	across any updates made to the binaries listed in the paxctld
+	configuration file.
