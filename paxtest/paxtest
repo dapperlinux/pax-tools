@@ -1,0 +1,3 @@
+cd /usr/sbin/paxtest-files
+./paxtest $1
+cd

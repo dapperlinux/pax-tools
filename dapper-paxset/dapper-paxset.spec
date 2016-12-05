@@ -1,7 +1,7 @@
 Summary:    Dapper Linux Pax Flags
 Name:       dapper-paxset
 Version:    25
-Release:    1
+Release:    2
 
 Group:      System Environment/Base
 License:    GPLv3+
@@ -21,7 +21,7 @@ to maintain your Pax flags after install.
 
 %install
 mkdir -p %{buildroot}%{_bindir}
-cp %{SOURCE0} %{buildroot}%{_bindir}
+install -m 755 %{SOURCE0} %{buildroot}%{_bindir}
 
 %posttrans
 dapper-paxset

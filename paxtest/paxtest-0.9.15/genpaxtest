@@ -8,7 +8,7 @@
 #
 
 echo $RUNDIR
-if [ "${RUNDIR}" = "/sbin/paxtest-files" ]
+if [ "${RUNDIR}" = "" ]
 then
 	RUNDIR=.
 fi
