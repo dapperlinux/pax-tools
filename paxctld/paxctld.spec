@@ -1,6 +1,6 @@
 Name: paxctld
 Version: 1.2.1
-Release: 2
+Release: 3
 Summary: PaX flags maintenance daemon
 Group: admin
 License: GPLv2
@@ -9,7 +9,7 @@ Requires(preun): chkconfig
 Requires(preun): initscripts
 Requires(postun): initscripts
 URL: https://grsecurity.net
-Source: paxctld-1.2.1.tar.xz
+Source: paxctld-1.2.1.tar.gz
 
 %description
 paxctld is a daemon that automatically applies PaX flags to binaries on
