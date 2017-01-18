@@ -50,8 +50,8 @@ paxctl -cmr /usr/bin/jar
 #------------------------------
 # Python Flags
 #------------------------------
-paxctl -cE /usr/bin/python2.7
-paxctl -cE /usr/bin/python3.5
+paxctl -cEm /usr/bin/python2.7
+paxctl -cEm /usr/bin/python3.5
 
 #------------------------------
 # Qemu Flags
@@ -70,6 +70,16 @@ paxctl -cm /usr/lib64/thunderbird/plugin-container
 #------------------------------
 # Valgrind Flags
 #------------------------------
-paxctl -cm /usr/bin/valgrind
-
+paxctl -cem /usr/bin/valgrind
+paxctl -cem /usr/lib/valgrind/cachegrind-amd64-linux
+paxctl -cem /usr/lib/valgrind/callgrind-amd64-linux
+paxctl -cem /usr/lib/valgrind/drd-amd64-linux
+paxctl -cem /usr/lib/valgrind/exp-bbv-amd64-linux
+paxctl -cem /usr/lib/valgrind/exp-dhat-amd64-linux
+paxctl -cem /usr/lib/valgrind/exp-sgcheck-amd64-linux
+paxctl -cem /usr/lib/valgrind/helgrind-amd64-linux
+paxctl -cem /usr/lib/valgrind/lackey-amd64-linux
+paxctl -cem /usr/lib/valgrind/massif-amd64-linux
+paxctl -cem /usr/lib/valgrind/memcheck-amd64-linux
+paxctl -cem /usr/lib/valgrind/none-amd64-linux
 
