@@ -14,12 +14,19 @@ paxctl -cm /usr/bin/gnome-shell-extension-prefs
 # Gnome Application Flags
 #------------------------------
 paxctl -cm /usr/libexec/gnome-terminal-server
+paxctl -cm /usr/bin/gnome-control-center
+paxctl -cm /usr/bin/gnome-builder
 
 #------------------------------
 # Grub Flags
 #------------------------------
 paxctl -cE /usr/bin/grub-bios-setup
 paxctl -cE /usr/sbin/grub-probe
+
+#------------------------------
+# Command Line Application Flags
+#------------------------------
+paxctl -cm /usr/bin/elinks
 
 #------------------------------
 # Firefox Flags
@@ -39,6 +46,11 @@ paxctl -cm /usr/lib64/firefox-hardened/plugin-container
 # Libreoffice Flags
 #------------------------------
 paxctl -cm /usr/lib64/libreoffice/program/soffice.bin
+
+#------------------------------
+# Liferea Flags
+#------------------------------
+paxctl -cm /usr/bin/liferea
 
 #------------------------------
 # Java Flags
