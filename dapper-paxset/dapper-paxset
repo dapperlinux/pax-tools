@@ -16,6 +16,8 @@ paxctl -cm /usr/bin/gnome-shell-extension-prefs
 paxctl -cm /usr/libexec/gnome-terminal-server
 paxctl -cm /usr/bin/gnome-control-center
 paxctl -cm /usr/bin/gnome-builder
+paxctl -cm /usr/libexec/sushi-start
+
 
 #------------------------------
 # Grub Flags
@@ -36,11 +38,11 @@ paxctl -cm /usr/lib64/firefox/firefox-bin
 paxctl -cm /usr/lib64/firefox/plugin-container
 
 #------------------------------
-# Firefox Hardened Flags
+# Dapper Hardened Browser Flags
 #------------------------------
-paxctl -cm /usr/lib64/firefox-hardened/firefox
-paxctl -cm /usr/lib64/firefox-hardened/firefox-bin
-paxctl -cm /usr/lib64/firefox-hardened/plugin-container
+paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser
+paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin
+paxctl -cm /usr/lib64/dapper-hardened-browser/plugin-container
 
 #------------------------------
 # Libreoffice Flags
