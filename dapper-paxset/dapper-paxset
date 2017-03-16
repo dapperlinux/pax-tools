@@ -17,6 +17,7 @@ paxctl -cm /usr/libexec/gnome-terminal-server
 paxctl -cm /usr/bin/gnome-control-center
 paxctl -cm /usr/bin/gnome-builder
 paxctl -cm /usr/libexec/sushi-start
+paxctl -cm /usr/libexec/gnome-session-check-accelerated-gl-helper
 
 
 #------------------------------
@@ -29,6 +30,7 @@ paxctl -cE /usr/sbin/grub-probe
 # Command Line Application Flags
 #------------------------------
 paxctl -cm /usr/bin/elinks
+paxctl -cm /usr/bin/glxinfo
 
 #------------------------------
 # Firefox Flags

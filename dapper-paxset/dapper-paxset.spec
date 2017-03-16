@@ -1,7 +1,7 @@
 Summary:    Dapper Linux Pax Flags
 Name:       dapper-paxset
 Version:    25
-Release:    6
+Release:    7
 
 Group:      System Environment/Base
 License:    GPLv3+
