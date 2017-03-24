@@ -18,6 +18,8 @@ paxctl -cm /usr/bin/gnome-control-center
 paxctl -cm /usr/bin/gnome-builder
 paxctl -cm /usr/libexec/sushi-start
 paxctl -cm /usr/libexec/gnome-session-check-accelerated-gl-helper
+paxctl -cm /usr/libexec/gnome-initial-setup
+paxctl -cm /usr/libexec/webkit2gtk-4.0/WebKitWebProcess
 
 
 #------------------------------
