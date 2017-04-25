@@ -20,7 +20,7 @@ paxctl -cm /usr/libexec/sushi-start
 paxctl -cm /usr/libexec/gnome-session-check-accelerated-gl-helper
 paxctl -cm /usr/libexec/gnome-initial-setup
 paxctl -cm /usr/libexec/webkit2gtk-4.0/WebKitWebProcess
-
+paxctl -cm /usr/bin/totem
 
 #------------------------------
 # Grub Flags
@@ -33,6 +33,7 @@ paxctl -cE /usr/sbin/grub-probe
 #------------------------------
 paxctl -cm /usr/bin/elinks
 paxctl -cm /usr/bin/glxinfo
+paxctl -cm /usr/libexec/gstreamer-1.0/gst-plugin-scanner
 
 #------------------------------
 # Firefox Flags
@@ -76,6 +77,11 @@ paxctl -cEm /usr/bin/python3.5
 #------------------------------
 paxctl -cm /usr/bin/qemu-system-i386
 paxctl -cm /usr/bin/qemu-system-x86_64
+
+#------------------------------
+# Spotify Flags
+#------------------------------
+paxctl -cm /usr/lib64/spotify-client/spotify
 
 
 #------------------------------

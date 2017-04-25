@@ -1,9 +1,9 @@
 # paxctld
 
-##About
+## About
 The paxctld package contains a daemon which ensures the PaX flags for all executables are correct when the operating system is running.
 
-##Building
+## Building
 To build this package, first install an RPM development chain:
 
 ```bash

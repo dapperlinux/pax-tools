@@ -1,10 +1,10 @@
 # dapper-paxset
 
-##About
+## About
 The Dapper PaXset package contains the correct PaX flag settings for the Dapper Linux distribution. 
 
 
-##Building
+## Building
 To build this package, first install an RPM development chain:
 
 ```bash
