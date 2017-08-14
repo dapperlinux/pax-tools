@@ -1,13 +1,13 @@
 Name: paxtest
 Version: 0.9.15
-Release: 2
+Release: 3
 Summary: PaX test suite
 Group: admin
 License: GPLv2
 BuildArch: x86_64
 
 URL: https://pax.grsecurity.net
-Source0: https://www.grsecurity.net/~spender/paxtest-0.9.15.tar.gz
+Source0: %{name}-%{version}.tar.xz
 Source1: paxtest.1.gz
 Source2: paxtest
 

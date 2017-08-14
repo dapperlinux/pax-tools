@@ -50,6 +50,11 @@ paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin
 paxctl -cm /usr/lib64/dapper-hardened-browser/plugin-container
 
 #------------------------------
+# Krita Flags
+#------------------------------
+paxctl -cm /usr/bin/krita
+
+#------------------------------
 # Libreoffice Flags
 #------------------------------
 paxctl -cm /usr/lib64/libreoffice/program/soffice.bin

@@ -19,8 +19,8 @@ $ rpmdev-setuptree
 And place the file paxctld.spec in the SPECS directory, and move the paxctld folder to the SOURCES directory:
 ```bash
 $ mv paxctld.spec ~/rpmbuild/SPECS/
-$ tar -czvf paxctld-1.2.1.tar.gz paxctld-1.2.1
-$ mv paxctld-1.2.1.tar.gz ~/rpmbuild/SOURCES/
+$ tar -cJvf paxctld-1.2.1.tar.xz paxctld-1.2.1
+$ mv paxctld-1.2.1.tar.xz ~/rpmbuild/SOURCES/
 ```
 
 and finally, you can build RPMs and SRPMs with:

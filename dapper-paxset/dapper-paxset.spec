@@ -1,7 +1,7 @@
 Summary:    Dapper Linux Pax Flags
 Name:       dapper-paxset
-Version:    25
-Release:    9
+Version:    26
+Release:    1
 
 Group:      System Environment/Base
 License:    GPLv3+
@@ -31,5 +31,8 @@ dapper-paxset
 %{_bindir}/%{name}
 
 %changelog
+* Mon Aug 14 2017 Matthew Ruffell <msr50@uclive.ac.nz>
+- Adding krita for DL26
+
 * Fri Dec  2 2016 Matthew Ruffell <msr50@uclive.ac.nz>
 - Created dapper-paxset
