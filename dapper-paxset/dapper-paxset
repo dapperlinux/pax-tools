@@ -29,6 +29,11 @@ paxctl -cE /usr/bin/grub-bios-setup
 paxctl -cE /usr/sbin/grub-probe
 
 #------------------------------
+# Calamares Flags
+#------------------------------
+paxctl -cm /usr/bin/calamares
+
+#------------------------------
 # Command Line Application Flags
 #------------------------------
 paxctl -cm /usr/bin/elinks
