@@ -5,115 +5,264 @@
 #------------------------------
 # Gnome Shell Flags
 #------------------------------
-paxctl -cm /usr/bin/gnome-shell
-paxctl -cm /usr/sbin/gdm
-paxctl -cm /usr/bin/gjs-console
-paxctl -cm /usr/bin/gnome-shell-extension-prefs
+if [ -e /usr/bin/gnome-shell ]
+then
+    paxctl -cm /usr/bin/gnome-shell
+fi
+if [ -e /usr/sbin/gdm ]
+then
+    paxctl -cm /usr/sbin/gdm
+fi
+if [ -e /usr/bin/gjs-console ]
+then
+    paxctl -cm /usr/bin/gjs-console
+fi
+if [ -e /usr/bin/gnome-shell-extension-prefs ]
+then
+    paxctl -cm /usr/bin/gnome-shell-extension-prefs
+fi
 
 #------------------------------
 # Gnome Application Flags
 #------------------------------
-paxctl -cm /usr/libexec/gnome-terminal-server
-paxctl -cm /usr/bin/gnome-control-center
-paxctl -cm /usr/bin/gnome-builder
-paxctl -cm /usr/libexec/sushi-start
-paxctl -cm /usr/libexec/gnome-session-check-accelerated-gl-helper
-paxctl -cm /usr/libexec/gnome-initial-setup
-paxctl -cm /usr/libexec/webkit2gtk-4.0/WebKitWebProcess
-paxctl -cm /usr/bin/totem
+if [ -e /usr/libexec/gnome-terminal-server ]
+then
+    paxctl -cm /usr/libexec/gnome-terminal-server
+fi
+if [ -e /usr/bin/gnome-control-center ]
+then
+    paxctl -cm /usr/bin/gnome-control-center
+fi
+if [ -e /usr/bin/gnome-builder ]
+then
+    paxctl -cm /usr/bin/gnome-builder
+fi
+if [ -e /usr/libexec/sushi-start ]
+then
+    paxctl -cm /usr/libexec/sushi-start
+fi
+if [ -e /usr/libexec/gnome-session-check-accelerated-gl-helper ]
+then
+    paxctl -cm /usr/libexec/gnome-session-check-accelerated-gl-helper
+fi
+if [ -e /usr/libexec/gnome-initial-setup ]
+then
+    paxctl -cm /usr/libexec/gnome-initial-setup
+fi
+if [ -e /usr/libexec/webkit2gtk-4.0/WebKitWebProcess ]
+then
+    paxctl -cm /usr/libexec/webkit2gtk-4.0/WebKitWebProcess
+fi
+if [ -e /usr/bin/totem ]
+then
+    paxctl -cm /usr/bin/totem
+fi
 
 #------------------------------
 # Grub Flags
 #------------------------------
-paxctl -cE /usr/bin/grub-bios-setup
-paxctl -cE /usr/sbin/grub-probe
+if [ -e /usr/bin/grub-bios-setup ]
+then
+    paxctl -cE /usr/bin/grub-bios-setup
+fi
+if [ -e /usr/sbin/grub-probe ]
+then
+    paxctl -cE /usr/sbin/grub-probe
+fi
 
 #------------------------------
 # Calamares Flags
 #------------------------------
-paxctl -cm /usr/bin/calamares
+if [ -e /usr/bin/calamares ]
+then
+    paxctl -cm /usr/bin/calamares
+fi
 
 #------------------------------
 # Command Line Application Flags
 #------------------------------
-paxctl -cm /usr/bin/elinks
-paxctl -cm /usr/bin/glxinfo
-paxctl -cm /usr/libexec/gstreamer-1.0/gst-plugin-scanner
+if [ -e /usr/bin/elinks ]
+then
+    paxctl -cm /usr/bin/elinks
+fi
+if [ -e /usr/bin/glxinfo ]
+then
+    paxctl -cm /usr/bin/glxinfo
+fi
+if [ -e /usr/libexec/gstreamer-1.0/gst-plugin-scanner ]
+then
+    paxctl -cm /usr/libexec/gstreamer-1.0/gst-plugin-scanner
+fi
 
 #------------------------------
 # Firefox Flags
 #------------------------------
-paxctl -cm /usr/lib64/firefox/firefox
-paxctl -cm /usr/lib64/firefox/firefox-bin
-paxctl -cm /usr/lib64/firefox/plugin-container
+if [ -e /usr/lib64/firefox/firefox ]
+then
+    paxctl -cm /usr/lib64/firefox/firefox
+fi
+if [ -e /usr/lib64/firefox/firefox-bin ]
+then
+    paxctl -cm /usr/lib64/firefox/firefox-bin
+fi
+if [ -e /usr/lib64/firefox/plugin-container ]
+then
+    paxctl -cm /usr/lib64/firefox/plugin-container
+fi
 
 #------------------------------
 # Dapper Hardened Browser Flags
 #------------------------------
-paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser
-paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin
-paxctl -cm /usr/lib64/dapper-hardened-browser/plugin-container
+if [ -e /usr/lib64/dapper-hardened-browser/dapper-hardened-browser ]
+then
+    paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser
+fi
+if [ -e /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin ]
+then
+    paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin
+fi
+if [ -e /usr/lib64/dapper-hardened-browser/plugin-container ]
+then
+    paxctl -cm /usr/lib64/dapper-hardened-browser/plugin-container
+fi
 
 #------------------------------
 # Krita Flags
 #------------------------------
-paxctl -cm /usr/bin/krita
+if [ -e /usr/bin/krita ]
+then
+    paxctl -cm /usr/bin/krita
+fi
 
 #------------------------------
 # Libreoffice Flags
 #------------------------------
-paxctl -cm /usr/lib64/libreoffice/program/soffice.bin
+if [ -e /usr/lib64/libreoffice/program/soffice.bin ]
+then
+    paxctl -cm /usr/lib64/libreoffice/program/soffice.bin
+fi
 
 #------------------------------
 # Liferea Flags
 #------------------------------
-paxctl -cm /usr/bin/liferea
+if [ -e /usr/bin/liferea ]
+then
+    paxctl -cm /usr/bin/liferea
+fi
 
 #------------------------------
 # Java Flags
 #------------------------------
-paxctl -cmr /usr/bin/java
-paxctl -cmr /usr/bin/javac
-paxctl -cmr /usr/bin/jar
+if [ -e /usr/bin/java ]
+then
+    paxctl -cmr /usr/bin/java
+fi
+if [ -e /usr/bin/javac ]
+then
+    paxctl -cmr /usr/bin/javac
+fi
+if [ -e /usr/bin/jar ]
+then
+    paxctl -cmr /usr/bin/jar
+fi
 
 #------------------------------
 # Python Flags
 #------------------------------
-paxctl -cEm /usr/bin/python2.7
-paxctl -cEm /usr/bin/python3.5
+if [ -e /usr/bin/python2.7 ]
+then
+    paxctl -cEm /usr/bin/python2.7
+fi
+if [ -e /usr/bin/python3.5 ]
+then
+    paxctl -cEm /usr/bin/python3.5
+fi
 
 #------------------------------
 # Qemu Flags
 #------------------------------
-paxctl -cm /usr/bin/qemu-system-i386
-paxctl -cm /usr/bin/qemu-system-x86_64
+if [ -e /usr/bin/qemu-system-i386 ]
+then
+    paxctl -cm /usr/bin/qemu-system-i386
+fi
+if [ -e /usr/bin/qemu-system-x86_64 ]
+then
+    paxctl -cm /usr/bin/qemu-system-x86_64
+fi
 
 #------------------------------
 # Spotify Flags
 #------------------------------
-paxctl -cm /usr/lib64/spotify-client/spotify
+if [ -e /usr/lib64/spotify-client/spotify ]
+then
+    paxctl -cm /usr/lib64/spotify-client/spotify
+fi
 
 
 #------------------------------
 # Thunderbird Flags
 #------------------------------
-paxctl -cm /usr/lib64/thunderbird/thunderbird
-paxctl -cm /usr/lib64/thunderbird/thunderbird-bin
-paxctl -cm /usr/lib64/thunderbird/plugin-container
+if [ -e /usr/lib64/thunderbird/thunderbird ]
+then
+    paxctl -cm /usr/lib64/thunderbird/thunderbird
+fi
+if [ -e /usr/lib64/thunderbird/thunderbird-bin ]
+then
+    paxctl -cm /usr/lib64/thunderbird/thunderbird-bin
+fi
+if [ -e /usr/lib64/thunderbird/plugin-container ]
+then
+    paxctl -cm /usr/lib64/thunderbird/plugin-container
+fi
 
 #------------------------------
 # Valgrind Flags
 #------------------------------
-paxctl -cem /usr/bin/valgrind
-paxctl -cem /usr/lib/valgrind/cachegrind-amd64-linux
-paxctl -cem /usr/lib/valgrind/callgrind-amd64-linux
-paxctl -cem /usr/lib/valgrind/drd-amd64-linux
-paxctl -cem /usr/lib/valgrind/exp-bbv-amd64-linux
-paxctl -cem /usr/lib/valgrind/exp-dhat-amd64-linux
-paxctl -cem /usr/lib/valgrind/exp-sgcheck-amd64-linux
-paxctl -cem /usr/lib/valgrind/helgrind-amd64-linux
-paxctl -cem /usr/lib/valgrind/lackey-amd64-linux
-paxctl -cem /usr/lib/valgrind/massif-amd64-linux
-paxctl -cem /usr/lib/valgrind/memcheck-amd64-linux
-paxctl -cem /usr/lib/valgrind/none-amd64-linux
-
+if [ -e /usr/bin/valgrind ]
+then
+    paxctl -cem /usr/bin/valgrind
+fi
+if [ -e /usr/lib/valgrind/cachegrind-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/cachegrind-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/callgrind-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/callgrind-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/drd-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/drd-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/exp-bbv-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/exp-bbv-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/exp-dhat-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/exp-dhat-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/exp-sgcheck-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/exp-sgcheck-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/helgrind-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/helgrind-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/lackey-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/lackey-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/massif-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/massif-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/memcheck-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/memcheck-amd64-linux
+fi
+if [ -e /usr/lib/valgrind/none-amd64-linux ]
+then
+    paxctl -cem /usr/lib/valgrind/none-amd64-linux
+fi
