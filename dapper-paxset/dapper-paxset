@@ -173,9 +173,9 @@ if [ -e /usr/bin/python2.7 ]
 then
     paxctl -cEm /usr/bin/python2.7
 fi
-if [ -e /usr/bin/python3.5 ]
+if [ -e /usr/bin/python3.6 ]
 then
-    paxctl -cEm /usr/bin/python3.5
+    paxctl -cEm /usr/bin/python3.6
 fi
 
 #------------------------------
