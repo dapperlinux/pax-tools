@@ -7,19 +7,19 @@
 #------------------------------
 if [ -e /usr/bin/gnome-shell ]
 then
-    paxctl -cm /usr/bin/gnome-shell
+    setfattr -n user.pax.flags -v m /usr/bin/gnome-shell
 fi
 if [ -e /usr/sbin/gdm ]
 then
-    paxctl -cm /usr/sbin/gdm
+    setfattr -n user.pax.flags -v m /usr/sbin/gdm
 fi
 if [ -e /usr/bin/gjs-console ]
 then
-    paxctl -cm /usr/bin/gjs-console
+    setfattr -n user.pax.flags -v m /usr/bin/gjs-console
 fi
 if [ -e /usr/bin/gnome-shell-extension-prefs ]
 then
-    paxctl -cm /usr/bin/gnome-shell-extension-prefs
+    setfattr -n user.pax.flags -v m /usr/bin/gnome-shell-extension-prefs
 fi
 
 #------------------------------
@@ -27,35 +27,35 @@ fi
 #------------------------------
 if [ -e /usr/libexec/gnome-terminal-server ]
 then
-    paxctl -cm /usr/libexec/gnome-terminal-server
+    setfattr -n user.pax.flags -v m /usr/libexec/gnome-terminal-server
 fi
 if [ -e /usr/bin/gnome-control-center ]
 then
-    paxctl -cm /usr/bin/gnome-control-center
+    setfattr -n user.pax.flags -v m /usr/bin/gnome-control-center
 fi
 if [ -e /usr/bin/gnome-builder ]
 then
-    paxctl -cm /usr/bin/gnome-builder
+    setfattr -n user.pax.flags -v m /usr/bin/gnome-builder
 fi
 if [ -e /usr/libexec/sushi-start ]
 then
-    paxctl -cm /usr/libexec/sushi-start
+    setfattr -n user.pax.flags -v m /usr/libexec/sushi-start
 fi
 if [ -e /usr/libexec/gnome-session-check-accelerated-gl-helper ]
 then
-    paxctl -cm /usr/libexec/gnome-session-check-accelerated-gl-helper
+    setfattr -n user.pax.flags -v m /usr/libexec/gnome-session-check-accelerated-gl-helper
 fi
 if [ -e /usr/libexec/gnome-initial-setup ]
 then
-    paxctl -cm /usr/libexec/gnome-initial-setup
+    setfattr -n user.pax.flags -v m /usr/libexec/gnome-initial-setup
 fi
 if [ -e /usr/libexec/webkit2gtk-4.0/WebKitWebProcess ]
 then
-    paxctl -cm /usr/libexec/webkit2gtk-4.0/WebKitWebProcess
+    setfattr -n user.pax.flags -v m /usr/libexec/webkit2gtk-4.0/WebKitWebProcess
 fi
 if [ -e /usr/bin/totem ]
 then
-    paxctl -cm /usr/bin/totem
+    setfattr -n user.pax.flags -v m /usr/bin/totem
 fi
 
 #------------------------------
@@ -63,11 +63,11 @@ fi
 #------------------------------
 if [ -e /usr/bin/grub-bios-setup ]
 then
-    paxctl -cE /usr/bin/grub-bios-setup
+    setfattr -n user.pax.flags -v E /usr/bin/grub-bios-setup
 fi
 if [ -e /usr/sbin/grub-probe ]
 then
-    paxctl -cE /usr/sbin/grub-probe
+    setfattr -n user.pax.flags -v E /usr/sbin/grub-probe
 fi
 
 #------------------------------
@@ -75,7 +75,7 @@ fi
 #------------------------------
 if [ -e /usr/bin/calamares ]
 then
-    paxctl -cm /usr/bin/calamares
+    setfattr -n user.pax.flags -v m /usr/bin/calamares
 fi
 
 #------------------------------
@@ -83,15 +83,15 @@ fi
 #------------------------------
 if [ -e /usr/bin/elinks ]
 then
-    paxctl -cm /usr/bin/elinks
+    setfattr -n user.pax.flags -v m /usr/bin/elinks
 fi
 if [ -e /usr/bin/glxinfo ]
 then
-    paxctl -cm /usr/bin/glxinfo
+    setfattr -n user.pax.flags -v m /usr/bin/glxinfo
 fi
 if [ -e /usr/libexec/gstreamer-1.0/gst-plugin-scanner ]
 then
-    paxctl -cm /usr/libexec/gstreamer-1.0/gst-plugin-scanner
+    setfattr -n user.pax.flags -v m /usr/libexec/gstreamer-1.0/gst-plugin-scanner
 fi
 
 #------------------------------
@@ -99,15 +99,15 @@ fi
 #------------------------------
 if [ -e /usr/lib64/firefox/firefox ]
 then
-    paxctl -cm /usr/lib64/firefox/firefox
+    setfattr -n user.pax.flags -v m /usr/lib64/firefox/firefox
 fi
 if [ -e /usr/lib64/firefox/firefox-bin ]
 then
-    paxctl -cm /usr/lib64/firefox/firefox-bin
+    setfattr -n user.pax.flags -v m /usr/lib64/firefox/firefox-bin
 fi
 if [ -e /usr/lib64/firefox/plugin-container ]
 then
-    paxctl -cm /usr/lib64/firefox/plugin-container
+    setfattr -n user.pax.flags -v m /usr/lib64/firefox/plugin-container
 fi
 
 #------------------------------
@@ -115,15 +115,15 @@ fi
 #------------------------------
 if [ -e /usr/lib64/dapper-hardened-browser/dapper-hardened-browser ]
 then
-    paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser
+    setfattr -n user.pax.flags -v m /usr/lib64/dapper-hardened-browser/dapper-hardened-browser
 fi
 if [ -e /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin ]
 then
-    paxctl -cm /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin
+    setfattr -n user.pax.flags -v m /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin
 fi
 if [ -e /usr/lib64/dapper-hardened-browser/plugin-container ]
 then
-    paxctl -cm /usr/lib64/dapper-hardened-browser/plugin-container
+    setfattr -n user.pax.flags -v m /usr/lib64/dapper-hardened-browser/plugin-container
 fi
 
 #------------------------------
@@ -131,7 +131,7 @@ fi
 #------------------------------
 if [ -e /usr/bin/krita ]
 then
-    paxctl -cm /usr/bin/krita
+    setfattr -n user.pax.flags -v m /usr/bin/krita
 fi
 
 #------------------------------
@@ -139,7 +139,7 @@ fi
 #------------------------------
 if [ -e /usr/lib64/libreoffice/program/soffice.bin ]
 then
-    paxctl -cm /usr/lib64/libreoffice/program/soffice.bin
+    setfattr -n user.pax.flags -v m /usr/lib64/libreoffice/program/soffice.bin
 fi
 
 #------------------------------
@@ -147,7 +147,7 @@ fi
 #------------------------------
 if [ -e /usr/bin/liferea ]
 then
-    paxctl -cm /usr/bin/liferea
+    setfattr -n user.pax.flags -v m /usr/bin/liferea
 fi
 
 #------------------------------
@@ -155,15 +155,15 @@ fi
 #------------------------------
 if [ -e /usr/bin/java ]
 then
-    paxctl -cmr /usr/bin/java
+    setfattr -n user.pax.flags -v mr /usr/bin/java
 fi
 if [ -e /usr/bin/javac ]
 then
-    paxctl -cmr /usr/bin/javac
+    setfattr -n user.pax.flags -v mr /usr/bin/javac
 fi
 if [ -e /usr/bin/jar ]
 then
-    paxctl -cmr /usr/bin/jar
+    setfattr -n user.pax.flags -v mr /usr/bin/jar
 fi
 
 #------------------------------
@@ -171,11 +171,11 @@ fi
 #------------------------------
 if [ -e /usr/bin/python2.7 ]
 then
-    paxctl -cEm /usr/bin/python2.7
+    setfattr -n user.pax.flags -v Em /usr/bin/python2.7
 fi
 if [ -e /usr/bin/python3.6 ]
 then
-    paxctl -cEm /usr/bin/python3.6
+    setfattr -n user.pax.flags -v Em /usr/bin/python3.6
 fi
 
 #------------------------------
@@ -183,11 +183,11 @@ fi
 #------------------------------
 if [ -e /usr/bin/qemu-system-i386 ]
 then
-    paxctl -cm /usr/bin/qemu-system-i386
+    setfattr -n user.pax.flags -v m /usr/bin/qemu-system-i386
 fi
 if [ -e /usr/bin/qemu-system-x86_64 ]
 then
-    paxctl -cm /usr/bin/qemu-system-x86_64
+    setfattr -n user.pax.flags -v m /usr/bin/qemu-system-x86_64
 fi
 
 #------------------------------
@@ -195,7 +195,7 @@ fi
 #------------------------------
 if [ -e /usr/lib64/spotify-client/spotify ]
 then
-    paxctl -cm /usr/lib64/spotify-client/spotify
+    setfattr -n user.pax.flags -v m /usr/lib64/spotify-client/spotify
 fi
 
 
@@ -204,15 +204,15 @@ fi
 #------------------------------
 if [ -e /usr/lib64/thunderbird/thunderbird ]
 then
-    paxctl -cm /usr/lib64/thunderbird/thunderbird
+    setfattr -n user.pax.flags -v m /usr/lib64/thunderbird/thunderbird
 fi
 if [ -e /usr/lib64/thunderbird/thunderbird-bin ]
 then
-    paxctl -cm /usr/lib64/thunderbird/thunderbird-bin
+    setfattr -n user.pax.flags -v m /usr/lib64/thunderbird/thunderbird-bin
 fi
 if [ -e /usr/lib64/thunderbird/plugin-container ]
 then
-    paxctl -cm /usr/lib64/thunderbird/plugin-container
+    setfattr -n user.pax.flags -v m /usr/lib64/thunderbird/plugin-container
 fi
 
 #------------------------------
@@ -220,49 +220,49 @@ fi
 #------------------------------
 if [ -e /usr/bin/valgrind ]
 then
-    paxctl -cem /usr/bin/valgrind
+    setfattr -n user.pax.flags -v em /usr/bin/valgrind
 fi
 if [ -e /usr/lib/valgrind/cachegrind-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/cachegrind-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/cachegrind-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/callgrind-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/callgrind-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/callgrind-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/drd-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/drd-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/drd-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/exp-bbv-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/exp-bbv-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/exp-bbv-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/exp-dhat-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/exp-dhat-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/exp-dhat-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/exp-sgcheck-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/exp-sgcheck-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/exp-sgcheck-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/helgrind-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/helgrind-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/helgrind-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/lackey-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/lackey-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/lackey-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/massif-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/massif-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/massif-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/memcheck-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/memcheck-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/memcheck-amd64-linux
 fi
 if [ -e /usr/lib/valgrind/none-amd64-linux ]
 then
-    paxctl -cem /usr/lib/valgrind/none-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib/valgrind/none-amd64-linux
 fi
