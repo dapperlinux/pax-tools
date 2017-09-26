@@ -167,6 +167,14 @@ then
 fi
 
 #------------------------------
+# Polari Flags
+#------------------------------
+if [ -e /usr/bin/polari ]
+then
+    setfattr -n user.pax.flags -v m /usr/bin/polari
+fi
+
+#------------------------------
 # Python Flags
 #------------------------------
 if [ -e /usr/bin/python2.7 ]

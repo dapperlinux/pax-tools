@@ -1,7 +1,7 @@
 Summary:    Dapper Linux Pax Flags
 Name:       dapper-paxset
 Version:    26
-Release:    5
+Release:    6
 
 Group:      System Environment/Base
 License:    GPLv3+
@@ -32,6 +32,9 @@ dapper-paxset
 %{_bindir}/%{name}
 
 %changelog
+* Wed Sep 27 2017 Matthew Ruffell <msr50@uclive.ac.nz>
+- Adding polari
+
 * Sat Sep 23 2017 Matthew Ruffell <msr50@uclive.ac.nz>
 - Moving from paxctl to extended file attributes with setfattr
 
