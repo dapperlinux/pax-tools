@@ -21,6 +21,14 @@ if [ -e /usr/bin/gnome-shell-extension-prefs ]
 then
     setfattr -n user.pax.flags -v m /usr/bin/gnome-shell-extension-prefs
 fi
+if [ -e /usr/libexec/Xorg ]
+then
+    setfattr -n user.pax.flags -v m /usr/libexec/Xorg
+fi
+if [ -e /usr/bin/Xwayland ]
+then
+    setfattr -n user.pax.flags -v m /usr/bin/Xwayland
+fi
 
 #------------------------------
 # Gnome Application Flags
