@@ -41,10 +41,6 @@ if [ -e /usr/bin/gnome-control-center ]
 then
     setfattr -n user.pax.flags -v m /usr/bin/gnome-control-center
 fi
-if [ -e /usr/bin/gnome-builder ]
-then
-    setfattr -n user.pax.flags -v m /usr/bin/gnome-builder
-fi
 if [ -e /usr/libexec/sushi-start ]
 then
     setfattr -n user.pax.flags -v m /usr/libexec/sushi-start
@@ -61,10 +57,7 @@ if [ -e /usr/libexec/webkit2gtk-4.0/WebKitWebProcess ]
 then
     setfattr -n user.pax.flags -v m /usr/libexec/webkit2gtk-4.0/WebKitWebProcess
 fi
-if [ -e /usr/bin/totem ]
-then
-    setfattr -n user.pax.flags -v m /usr/bin/totem
-fi
+
 
 #------------------------------
 # Grub Flags
@@ -118,20 +111,45 @@ then
     setfattr -n user.pax.flags -v m /usr/lib64/firefox/plugin-container
 fi
 
+if [ -e /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/firefox ]
+then
+    setfattr -n user.pax.flags -v m /usr/lib64/firefox/firefox
+fi
+if [ -e /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/firefox-bin ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/firefox-bin
+fi
+if [ -e /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/plugin-container ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/plugin-container
+fi
 #------------------------------
 # Dapper Hardened Browser Flags
 #------------------------------
-if [ -e /usr/lib64/dapper-hardened-browser/dapper-hardened-browser ]
+if [ -e /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox ]
 then
-    setfattr -n user.pax.flags -v m /usr/lib64/dapper-hardened-browser/dapper-hardened-browser
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-58.0/firefox
 fi
-if [ -e /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin ]
+if [ -e /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox-bin ]
 then
-    setfattr -n user.pax.flags -v m /usr/lib64/dapper-hardened-browser/dapper-hardened-browser-bin
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-58.0/firefox-bin
 fi
-if [ -e /usr/lib64/dapper-hardened-browser/plugin-container ]
+if [ -e /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/plugin-container ]
 then
-    setfattr -n user.pax.flags -v m /usr/lib64/dapper-hardened-browser/plugin-container
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox/plugin-container
+fi
+
+#------------------------------
+# Gnome Builder Flags
+#------------------------------
+if [ -e /usr/bin/gnome-builder ]
+then
+    setfattr -n user.pax.flags -v m /usr/bin/gnome-builder
+fi
+
+if [ -e /var/lib/flatpak/app/org.gnome.Builder/current/active/files/bin/gnome-builder ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.gnome.Builder/current/active/files/bin/gnome-builder
 fi
 
 #------------------------------
@@ -142,12 +160,9 @@ then
     setfattr -n user.pax.flags -v m /usr/bin/krita
 fi
 
-#------------------------------
-# Libreoffice Flags
-#------------------------------
-if [ -e /usr/lib64/libreoffice/program/soffice.bin ]
+if [ -e /var/lib/flatpak/app/org.kde.krita/current/active/files/bin/krita ]
 then
-    setfattr -n user.pax.flags -v m /usr/lib64/libreoffice/program/soffice.bin
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.kde.krita/current/active/files/bin/krita
 fi
 
 #------------------------------
@@ -156,6 +171,32 @@ fi
 if [ -e /usr/bin/liferea ]
 then
     setfattr -n user.pax.flags -v m /usr/bin/liferea
+fi
+
+#------------------------------
+# Libreoffice Flags
+#------------------------------
+if [ -e /usr/lib64/libreoffice/program/soffice.bin ]
+then
+    setfattr -n user.pax.flags -v m /usr/lib64/libreoffice/program/soffice.bin
+fi
+
+if [ -e /var/lib/flatpak/app/org.libreoffice.LibreOffice/current/active/files/libreoffice/program/soffice.bin ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.libreoffice.LibreOffice/current/active/files/libreoffice/program/soffice.bin
+fi
+
+#------------------------------
+# Minetest Flags
+#------------------------------
+if [ -e /usr/bin/minetest ]
+then
+    setfattr -n user.pax.flags -v m /usr/bin/minetest
+fi
+
+if [ -e /var/lib/flatpak/app/net.minetest.Minetest/current/active/files/bin/minetest ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/net.minetest.Minetest/current/active/files/bin/minetest
 fi
 
 #------------------------------
@@ -180,6 +221,11 @@ fi
 if [ -e /usr/bin/polari ]
 then
     setfattr -n user.pax.flags -v m /usr/bin/polari
+fi
+
+if [ -e /var/lib/flatpak/app/org.gnome.Polari/current/active/files/bin/polari ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.gnome.Polari/current/active/files/bin/polari
 fi
 
 #------------------------------
@@ -214,7 +260,23 @@ then
     setfattr -n user.pax.flags -v m /usr/lib64/spotify-client/spotify
 fi
 
+if [ -e /var/lib/flatpak/app/com.spotify.Client/current/active/files/extra/share/spotify/spotify ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.spotify.Client/current/active/files/extra/share/spotify/spotify
+fi
 
+#------------------------------
+# Totem Flags
+#------------------------------
+if [ -e /usr/bin/totem ]
+then
+    setfattr -n user.pax.flags -v m /usr/bin/totem
+fi
+
+if [ -e /var/lib/flatpak/app/org.gnome.Totem/current/active/files/bin/totem ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.gnome.Totem/current/active/files/bin/totem
+fi
 #------------------------------
 # Thunderbird Flags
 #------------------------------
