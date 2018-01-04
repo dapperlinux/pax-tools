@@ -113,7 +113,7 @@ fi
 
 if [ -e /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/firefox ]
 then
-    setfattr -n user.pax.flags -v m /usr/lib64/firefox/firefox
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/firefox
 fi
 if [ -e /var/lib/flatpak/app/org.mozilla.Firefox/current/active/files/lib/firefox-*/firefox-bin ]
 then
@@ -128,11 +128,11 @@ fi
 #------------------------------
 if [ -e /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-58.0/firefox
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox
 fi
 if [ -e /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox-bin ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-58.0/firefox-bin
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox-bin
 fi
 if [ -e /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/plugin-container ]
 then
