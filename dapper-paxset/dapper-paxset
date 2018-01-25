@@ -136,7 +136,7 @@ then
 fi
 if [ -e /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/plugin-container ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/firefox/plugin-container
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/com.dapperlinux.Dapper-Hardened-Browser/current/active/files/lib/firefox-*/plugin-container
 fi
 
 #------------------------------
