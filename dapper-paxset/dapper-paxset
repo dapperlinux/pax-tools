@@ -210,6 +210,10 @@ if [ -e /usr/bin/javac ]
 then
     setfattr -n user.pax.flags -v mr /usr/bin/javac
 fi
+if [ -e /usr/bin/javadoc ]
+then
+    setfattr -n user.pax.flags -v mr /usr/bin/javadoc
+fi
 if [ -e /usr/bin/jar ]
 then
     setfattr -n user.pax.flags -v mr /usr/bin/jar
