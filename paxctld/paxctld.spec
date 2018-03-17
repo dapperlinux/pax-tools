@@ -1,6 +1,6 @@
 Name: paxctld
 Version: 1.2.1
-Release: 18
+Release: 19
 Summary: PaX flags maintenance daemon
 Group: admin
 License: GPLv2
