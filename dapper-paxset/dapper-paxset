@@ -297,6 +297,19 @@ then
     setfattr -n user.pax.flags -v m /usr/lib64/thunderbird/plugin-container
 fi
 
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird
+fi
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird-bin ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird-bin
+fi
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/plugin-container ]
+then
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/plugin-container
+fi
+
 #------------------------------
 # Valgrind Flags
 #------------------------------
