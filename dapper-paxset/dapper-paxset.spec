@@ -1,7 +1,7 @@
 Summary:    Dapper Linux Pax Flags
 Name:       dapper-paxset
-Version:    27
-Release:    8
+Version:    28
+Release:    1
 
 Group:      System Environment/Base
 License:    GPLv3+
@@ -32,6 +32,9 @@ dapper-paxset
 %{_bindir}/%{name}
 
 %changelog
+* Sat May  5 2018 Matthew Ruffell <msr50@uclive.ac.nz>
+- Updating for DL28
+
 * Sat Oct 28 2017 Matthew Ruffell <msr50@uclive.ac.nz>
 - Adding Xorg and Xwayland
 
