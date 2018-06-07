@@ -297,17 +297,17 @@ then
     setfattr -n user.pax.flags -v m /usr/lib64/thunderbird/plugin-container
 fi
 
-if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird ]
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird
 fi
-if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird-bin ]
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird-bin ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/thunderbird-bin
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird-bin
 fi
-if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/plugin-container ]
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/plugin-container ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird-52.7.0/plugin-container
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/plugin-container
 fi
 
 #------------------------------
