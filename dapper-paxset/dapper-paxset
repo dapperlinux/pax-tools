@@ -94,6 +94,10 @@ if [ -e /usr/libexec/gstreamer-1.0/gst-plugin-scanner ]
 then
     setfattr -n user.pax.flags -v m /usr/libexec/gstreamer-1.0/gst-plugin-scanner
 fi
+if [ -e /usr/lib/polkit-1/polkitd ] ]
+then
+    setfattr -n user.pax.flags -v m /usr/lib/polkit-1/polkitd
+fi
 
 #------------------------------
 # Firefox Flags
