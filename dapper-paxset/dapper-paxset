@@ -321,47 +321,47 @@ if [ -e /usr/bin/valgrind ]
 then
     setfattr -n user.pax.flags -v em /usr/bin/valgrind
 fi
-if [ -e /usr/lib/valgrind/cachegrind-amd64-linux ]
+if [ -e /usr/lib64/valgrind/cachegrind-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/cachegrind-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/cachegrind-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/callgrind-amd64-linux ]
+if [ -e /usr/lib64/valgrind/callgrind-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/callgrind-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/callgrind-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/drd-amd64-linux ]
+if [ -e /usr/lib64/valgrind/drd-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/drd-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/drd-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/exp-bbv-amd64-linux ]
+if [ -e /usr/lib64/valgrind/exp-bbv-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/exp-bbv-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/exp-bbv-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/exp-dhat-amd64-linux ]
+if [ -e /usr/lib64/valgrind/exp-dhat-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/exp-dhat-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/exp-dhat-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/exp-sgcheck-amd64-linux ]
+if [ -e /usr/lib64/valgrind/exp-sgcheck-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/exp-sgcheck-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/exp-sgcheck-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/helgrind-amd64-linux ]
+if [ -e /usr/lib64/valgrind/helgrind-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/helgrind-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/helgrind-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/lackey-amd64-linux ]
+if [ -e /usr/lib64/valgrind/lackey-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/lackey-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/lackey-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/massif-amd64-linux ]
+if [ -e /usr/lib64/valgrind/massif-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/massif-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/massif-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/memcheck-amd64-linux ]
+if [ -e /usr/lib64/valgrind/memcheck-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/memcheck-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/memcheck-amd64-linux
 fi
-if [ -e /usr/lib/valgrind/none-amd64-linux ]
+if [ -e /usr/lib64/valgrind/none-amd64-linux ]
 then
-    setfattr -n user.pax.flags -v em /usr/lib/valgrind/none-amd64-linux
+    setfattr -n user.pax.flags -v em /usr/lib64/valgrind/none-amd64-linux
 fi
