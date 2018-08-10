@@ -49,6 +49,10 @@ if [ -e /usr/libexec/gnome-session-check-accelerated-gl-helper ]
 then
     setfattr -n user.pax.flags -v m /usr/libexec/gnome-session-check-accelerated-gl-helper
 fi
+if [ -e /usr/libexec/gnome-session-check-accelerated-gles-helper ]
+then
+    setfattr -n user.pax.flags -v m /usr/libexec/gnome-session-check-accelerated-gles-helper
+fi
 if [ -e /usr/libexec/gnome-initial-setup ]
 then
     setfattr -n user.pax.flags -v m /usr/libexec/gnome-initial-setup
@@ -301,17 +305,17 @@ then
     setfattr -n user.pax.flags -v m /usr/lib64/thunderbird/plugin-container
 fi
 
-if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird ]
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird/thunderbird ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird/thunderbird
 fi
-if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird-bin ]
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird/thunderbird-bin ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/thunderbird-bin
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird/thunderbird-bin
 fi
-if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/plugin-container ]
+if [ -e /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird/plugin-container ]
 then
-    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird*/plugin-container
+    setfattr -n user.pax.flags -v m /var/lib/flatpak/app/org.mozilla.Thunderbird/current/active/files/lib/thunderbird/plugin-container
 fi
 
 #------------------------------
