@@ -7,7 +7,7 @@ License: GPLv2
 BuildArch: x86_64
 
 URL: https://pax.grsecurity.net
-Source: https://pax.grsecurity.net/paxctl-0.9.tar.xz
+Source: https://pax.grsecurity.net/paxctl-0.9.tar.gz
 
 %description
   This is paxctl for controlling PaX flags on a per binary basis. PaX
